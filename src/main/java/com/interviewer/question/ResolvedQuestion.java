@@ -1,6 +1,7 @@
-package com.interviewer.ui;
+package com.interviewer.question;
 
 import com.interviewer.party.Party;
+import org.apache.log4j.Logger;
 
 /**
  * Created by Alastair on 8/22/2015.
@@ -13,6 +14,8 @@ public class ResolvedQuestion implements Question {
     private String attributeId;
     private String value;
     private String entityId;
+
+    static Logger log = Logger.getLogger(ResolvedQuestion.class);
 
     public ResolvedQuestion(Party sender, Party receiver, String questionText) {
         this.setEntityId(getEntityId());

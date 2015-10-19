@@ -1,4 +1,4 @@
-package com.interviewer.ui;
+package com.interviewer.question;
 
 import com.interviewer.datamodel.Attribute;
 import com.interviewer.datamodel.Entity;
@@ -9,7 +9,7 @@ import org.junit.Test;
 public class FlowTest {
 
     @Test
-    public static void main (String[] args) {
+    public void testFlow() {
         //Set up members
         //Add members to party
         //Member 1 asks question

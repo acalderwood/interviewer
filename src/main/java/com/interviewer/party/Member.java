@@ -1,9 +1,10 @@
 package com.interviewer.party;
 
-import com.interviewer.ui.ResolvedQuestion;
+import com.interviewer.question.ResolvedQuestion;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.log4j.Logger;
 
 /**
  * Created by Alastair on 8/22/2015.
@@ -14,27 +15,30 @@ public class Member {
     private Party party;
     public List<ResolvedQuestion> pendingQuestions = new ArrayList<>();
 
+    static Logger log = Logger.getLogger(Member.class);
+
     public Member(String name) {
         this.setName(name);
-        System.out.println("Member '" + name + "' created");
+        log.debug("Member '" + name + "' created");
     }
 
     public Member(String name, Party party) {
         this.setName(name);
         this.party = party;
-        System.out.println("Member '" + name + "' created as member of Party '" + party + "'");
+        log.debug("Member '" + name + "' created as member of Party '" + party + "'");
     }
 
     public void ask(Party party, ResolvedQuestion question) {
+        log.debug("Member '" + getName() + "' asked question '" + question.getQuestionText() + "' to Party '" + party.getName() + "'");
         for (Member member : party.getMembers()) {
             member.receive(question);
         }
-        System.out.println("Member '" + getName() + "' asked question '" + question.getQuestionText() + "' to Party '" + party + "'");
+
     }
 
     public void receive(ResolvedQuestion question) {
         pendingQuestions.add(question);
-        System.out.println("Member '" + getName() + "' of party '" + party.getName() + "' asked question '" + question.getQuestionText() + "' to Party '" + party.getName() + "'");
+        log.debug("Party '" + party.getName() + "' received question '" + question.getQuestionText() + "' from Member '"  + getName() + "'");
     }
 
     public List<ResolvedQuestion> getPendingQuestions() {

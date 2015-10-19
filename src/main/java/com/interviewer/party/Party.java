@@ -1,5 +1,7 @@
 package com.interviewer.party;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,15 +15,17 @@ public class Party {
     private String name;
     private Map<String, Member> memberMap = new HashMap<>();
 
+    static Logger log = Logger.getLogger(Party.class);
+
     public Party(String name) {
         this.setName(name);
-        System.out.println("Party '" + name + "' created");
+        log.debug("Party '" + name + "' created");
     }
 
     public void addMember(Member member) {
         member.setParty(this);
         memberMap.put(member.getName(), member);
-        System.out.println("Member '" + member.getName() + "' added to Party '" + name + "'");
+        log.debug("Member '" + member.getName() + "' added to Party '" + name + "'");
     }
 
     public List<Member> getMembers() {

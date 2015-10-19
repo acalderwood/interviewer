@@ -1,0 +1,13 @@
+2015-10-18 21:20:22 DEBUG Member:22 - Member 'lessee_1' created
+2015-10-18 21:20:22 DEBUG Member:22 - Member 'lessee_2' created
+2015-10-18 21:20:22 DEBUG Member:22 - Member 'landlord_1' created
+2015-10-18 21:20:22 DEBUG Member:22 - Member 'landlord_2' created
+2015-10-18 21:20:22 DEBUG Party:22 - Party 'lessees' created
+2015-10-18 21:20:22 DEBUG Party:28 - Member 'lessee_1' added to Party 'lessees'
+2015-10-18 21:20:22 DEBUG Party:28 - Member 'lessee_2' added to Party 'lessees'
+2015-10-18 21:20:22 DEBUG Party:22 - Party 'landlords' created
+2015-10-18 21:20:22 DEBUG Party:28 - Member 'landlord_1' added to Party 'landlords'
+2015-10-18 21:20:22 DEBUG Party:28 - Member 'landlord_2' added to Party 'landlords'
+2015-10-18 21:20:22 DEBUG Member:40 - Party 'landlords' received question 'Is the house overlooked by a neighbouring property?' from Member 'landlord_2'
+2015-10-18 21:20:22 DEBUG Member:40 - Party 'landlords' received question 'Is the house overlooked by a neighbouring property?' from Member 'landlord_1'
+2015-10-18 21:20:22 DEBUG Member:35 - Member 'lessee_1' asked question 'Is the house overlooked by a neighbouring property?' to Party 'landlords'

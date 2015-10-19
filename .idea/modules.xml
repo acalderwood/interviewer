@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Interviewer.iml" filepath="$PROJECT_DIR$/Interviewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interrogator.iml" filepath="$PROJECT_DIR$/interrogator.iml" />
     </modules>
   </component>
 </project>
