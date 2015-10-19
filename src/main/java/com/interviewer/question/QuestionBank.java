@@ -11,9 +11,13 @@ public class QuestionBank {
 
     static Logger log = Logger.getLogger(QuestionBank.class);
 
-    private List<CandidateQuestion> questionsInFlow;
+    private List<ResolvedQuestion> questions;
 
-    public void addQuestion(CandidateQuestion question) {
-        questionsInFlow.add(question);
+    public void addQuestion(ResolvedQuestion question) {
+        questions.add(question);
+    }
+
+    public ResolvedQuestion match(CandidateQuestion candidateQuestion) {
+        return null;
     }
 }

@@ -17,6 +17,7 @@ public class FlowTest {
         //Ask member's party if question relevant
         //Member 2 says yes => update the number of people asking question
 
+        QuestionBank questionBank = new QuestionBank();
 
         Member lessee1 = new Member("lessee_1");
         Member lessee2 = new Member("lessee_2");
@@ -42,22 +43,21 @@ public class FlowTest {
         ResolvedQuestion resolvedQuestion = new ResolvedQuestion(lessees, landlords, "Do the neighbours overlook the property?");
 //        lessee1.ask(landlords, question1);
 
+        questionBank.addQuestion(resolvedQuestion);
+
         //Search
         //""Is the house overlooked by a neighbouring property?" has has several answers.
         // Ask "Do the neighbours overlook the property?" again?"
 
-        //searchService.match(candidateQuestion, questionBank);
-        boolean questionAlreadyAsked = false;
+        //searchService.match = questionBank.match(candidateQuestion(candidateQuestion, questionBank);
 
-        ResolvedQuestion question;
+        ResolvedQuestion question = questionBank.match(candidateQuestion);
         //Answer = yes
-        if (!questionAlreadyAsked) {
+        if (question == null) {
             question = new ResolvedQuestion(candidateQuestion);
+            questionBank.addQuestion(question);
             candidateQuestion = null;
             //questionBank.add(question)
-        } else {
-            //Answer = no
-            question = resolvedQuestion;
         }
 
         lessee1.ask(landlords, question);
