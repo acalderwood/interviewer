@@ -2,6 +2,7 @@ package com.interviewer.question;
 
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,13 +12,15 @@ public class QuestionBank {
 
     static Logger log = Logger.getLogger(QuestionBank.class);
 
-    private List<ResolvedQuestion> questions;
+    private List<ResolvedQuestion> questions = new ArrayList<>();
 
     public void addQuestion(ResolvedQuestion question) {
         questions.add(question);
+        log.debug("Added question '" + question.getQuestionText() + "' to QuestionBank");
     }
 
     public ResolvedQuestion match(CandidateQuestion candidateQuestion) {
-        return null;
+        log.debug("Match '" + candidateQuestion.getQuestionText() + "' with question '" + questions.get(0).getQuestionText() + "'");
+        return questions.get(0);
     }
 }

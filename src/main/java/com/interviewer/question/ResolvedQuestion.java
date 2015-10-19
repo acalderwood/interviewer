@@ -18,15 +18,16 @@ public class ResolvedQuestion implements Question {
     static Logger log = Logger.getLogger(ResolvedQuestion.class);
 
     public ResolvedQuestion(Party sender, Party receiver, String questionText) {
-        this.setEntityId(getEntityId());
-        this.setAttributeId(getAttributeId());
+        this.setSender(sender);
+        this.setReceiver(receiver);
+        this.setQuestionText(questionText);
     }
 
     public ResolvedQuestion(CandidateQuestion candidateQuestion) {
         this.setSender(candidateQuestion.getQuestioner().getParty());
         this.setReceiver(candidateQuestion.getReceiver());
         this.setQuestionText(candidateQuestion.getQuestionText());
-        System.out.println("ResolvedQuestion created, text '" + candidateQuestion.getQuestionText() +
+        log.debug("ResolvedQuestion created, text '" + candidateQuestion.getQuestionText() +
                 " from CandidateQuestion");
     }
 

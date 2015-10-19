@@ -56,7 +56,6 @@ public class FlowTest {
         if (question == null) {
             question = new ResolvedQuestion(candidateQuestion);
             questionBank.addQuestion(question);
-            candidateQuestion = null;
             //questionBank.add(question)
         }
 
